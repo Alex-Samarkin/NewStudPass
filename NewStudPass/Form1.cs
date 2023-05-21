@@ -16,5 +16,23 @@ namespace NewStudPass
         {
             InitializeComponent();
         }
+
+        private DataContext ctx;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (ctx = new DataContext())
+            {
+                var p = new Person() { FirstName = "FName" };
+
+                ctx.Persons.Add(p);
+                ctx.SaveChanges();
+            }
+
+            using (ctx = new DataContext())
+            {
+
+            }
+        }
     }
 }
