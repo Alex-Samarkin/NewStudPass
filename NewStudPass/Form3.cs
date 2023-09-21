@@ -5,25 +5,22 @@ using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NewStudPass
 {
-    
-
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
         private DataContext ctx;
 
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
             ctx = new DataContext();
 

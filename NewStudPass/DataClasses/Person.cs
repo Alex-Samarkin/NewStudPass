@@ -35,6 +35,7 @@ namespace NewStudPass
         public virtual ObservableListSource<Address> Addresss { get; set; }
         public virtual ObservableListSource<InternetSource> InternetSources { get; set; }
         public virtual ObservableListSource<Metric> Metrics { get; set; }
+        public virtual ObservableListSource<Metric2> Metric2s { get; set; }
 
         [NotMapped] public string LastNameWithInitials => $"{LastName??" "} {(FirstName??" ")[0]}.{(MiddleName??" ")[0]}.";
         [NotMapped] public string FullName => $"{LastName??" "} {FirstName??" "} {MiddleName??" "}";

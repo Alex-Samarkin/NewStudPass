@@ -108,8 +108,9 @@
             this.personBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addresssBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internetSourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,10 +120,10 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.internetSourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             fullNameLabel = new System.Windows.Forms.Label();
             lastNameWithInitialsLabel = new System.Windows.Forms.Label();
             ageLabel = new System.Windows.Forms.Label();
@@ -154,9 +155,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
             this.personBindingNavigator.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addresssBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetSourcesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -488,7 +489,7 @@
             // 
             // bindingNavigator1
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem1;
+            this.bindingNavigator1.AddNewItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.BindingSource = this.addresssBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem1;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem1;
@@ -956,7 +957,8 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton5});
+            this.toolStripButton5,
+            this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 713);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1007, 25);
@@ -973,14 +975,19 @@
             this.toolStripButton5.Text = "Антропометрические данные";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataSource = typeof(NewStudPass.Person);
-            // 
             // addresssBindingSource
             // 
             this.addresssBindingSource.DataMember = "Addresss";
             this.addresssBindingSource.DataSource = this.personBindingSource;
+            // 
+            // internetSourcesBindingSource
+            // 
+            this.internetSourcesBindingSource.DataMember = "InternetSources";
+            this.internetSourcesBindingSource.DataSource = this.personBindingSource;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(NewStudPass.Person);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -1036,11 +1043,6 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Прим";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // internetSourcesBindingSource
-            // 
-            this.internetSourcesBindingSource.DataMember = "InternetSources";
-            this.internetSourcesBindingSource.DataSource = this.personBindingSource;
-            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "NameOf";
@@ -1058,6 +1060,16 @@
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Comment";
             this.dataGridViewTextBoxColumn13.HeaderText = "Примечание";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(239, 22);
+            this.toolStripButton6.Text = "Сердечно-сосудистая система и дыхание";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // Form1
             // 
@@ -1096,9 +1108,9 @@
             this.personBindingNavigator.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addresssBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetSourcesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1186,6 +1198,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }
 

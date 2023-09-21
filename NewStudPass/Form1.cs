@@ -92,5 +92,11 @@ namespace NewStudPass
             var f = new Form2();
             f.ShowDialog();
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            var f = new Form3();
+            f.ShowDialog();
+        }
     }
 }
