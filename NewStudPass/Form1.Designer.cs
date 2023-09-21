@@ -46,7 +46,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rowVersionLabel1 = new System.Windows.Forms.Label();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personIdLabel1 = new System.Windows.Forms.Label();
             this.secondaryEmailTextBox = new System.Windows.Forms.TextBox();
             this.secondaryPhoneTextBox = new System.Windows.Forms.TextBox();
@@ -62,7 +61,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.addresssBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -79,7 +77,6 @@
             this.addresssDataGridView = new System.Windows.Forms.DataGridView();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
-            this.internetSourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
@@ -109,6 +106,10 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.personBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addresssBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,6 +119,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.internetSourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -139,21 +141,22 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addresssBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addresssDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.internetSourcesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetSourcesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
             this.personBindingNavigator.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addresssBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetSourcesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -340,10 +343,6 @@
             this.rowVersionLabel1.TabIndex = 3;
             this.rowVersionLabel1.Text = "label1";
             // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataSource = typeof(NewStudPass.Person);
-            // 
             // personIdLabel1
             // 
             this.personIdLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "PersonId", true));
@@ -529,11 +528,6 @@
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem1.Text = "Добавить";
             // 
-            // addresssBindingSource
-            // 
-            this.addresssBindingSource.DataMember = "Addresss";
-            this.addresssBindingSource.DataSource = this.personBindingSource;
-            // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
@@ -697,11 +691,6 @@
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem2.Text = "Добавить";
-            // 
-            // internetSourcesBindingSource
-            // 
-            this.internetSourcesBindingSource.DataMember = "InternetSources";
-            this.internetSourcesBindingSource.DataSource = this.personBindingSource;
             // 
             // bindingNavigatorCountItem2
             // 
@@ -962,6 +951,37 @@
             this.personBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.personBindingNavigatorSaveItem.Click += new System.EventHandler(this.personBindingNavigatorSaveItem_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton5});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 713);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1007, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(175, 22);
+            this.toolStripButton5.Text = "Антропометрические данные";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(NewStudPass.Person);
+            // 
+            // addresssBindingSource
+            // 
+            this.addresssBindingSource.DataMember = "Addresss";
+            this.addresssBindingSource.DataSource = this.personBindingSource;
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "State";
@@ -1016,6 +1036,11 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Прим";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // internetSourcesBindingSource
+            // 
+            this.internetSourcesBindingSource.DataMember = "InternetSources";
+            this.internetSourcesBindingSource.DataSource = this.personBindingSource;
+            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "NameOf";
@@ -1039,6 +1064,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 738);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.personBindingNavigator);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
@@ -1051,7 +1077,6 @@
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -1061,16 +1086,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addresssBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addresssDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.internetSourcesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetSourcesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).EndInit();
             this.personBindingNavigator.ResumeLayout(false);
             this.personBindingNavigator.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addresssBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetSourcesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1156,6 +1184,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
     }
 }
 

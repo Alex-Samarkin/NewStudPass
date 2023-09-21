@@ -86,5 +86,11 @@ namespace NewStudPass
             };
             p.Addresss.Add(a);
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            var f = new Form2();
+            f.ShowDialog();
+        }
     }
 }
